@@ -28,6 +28,11 @@ To create a development environment, follow the three steps [in the wiki](https:
 
 Please raise an issue if you are unable to build that includes the OS, java version and erlang versions.
 
+A mostly reproducible build can be produced using a Docker container:
+```
+docker run --rm -v `pwd`:`pwd` -w `pwd` openjdk:8 sh -c 'apt-get update && apt-get install -y --no-install-recommends openjfx && rm -rf /var/lib/apt/lists/* && ./mvnw clean compile install assembly:single'
+```
+
 ### Features and How To
 
 ##### Set traces on functions
