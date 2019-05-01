@@ -30,7 +30,7 @@ Please raise an issue if you are unable to build that includes the OS, java vers
 
 A mostly reproducible build can be produced using a Docker container:
 ```
-docker run --rm -v `pwd`:`pwd` -w `pwd` openjdk:8 sh -c 'apt-get update && apt-get install -y --no-install-recommends openjfx && rm -rf /var/lib/apt/lists/* && ./mvnw clean compile install assembly:single'
+docker run --rm -v `pwd`:`pwd` -w `pwd` openjdk:8 sh -c 'apt-get update && apt-get install -y --no-install-recommends openjfx erlang-base && rm -rf /var/lib/apt/lists/* && ./mvnw clean compile install assembly:single'
 ```
 
 ### Features and How To
